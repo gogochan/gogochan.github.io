@@ -6,6 +6,9 @@ function put() {
         method: 'POST',
         credentials: "include",
         mode: "no-cors",
+        headers: {
+            'Content-Type': 'application/json'
+        },
         body: JSON.stringify({
             "userId": "d35874530d87a07ad3cd5864affdf5736743f5ad"
         })
