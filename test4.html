@@ -5,7 +5,7 @@ function put() {
     fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengejson/plusplus', {
         method: 'POST',
         credentials: "include",
-        mode: "no-cors",
+        mode: "cors",
         headers: {
             'Content-Type': 'application/json'
         },
