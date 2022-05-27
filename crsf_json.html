@@ -2,6 +2,7 @@
 <head>
 <script>
 function put() {
+    document.domain = "security-shepherd.dev.inf.elasticnet.co";
     fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengejson/plusplus', {
         method: 'POST',
         credentials: "include",

