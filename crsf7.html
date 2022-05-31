@@ -3,8 +3,9 @@
         <script>
             function doAnother(event) {
                 const regex = /Your csrf Token for this Challenge is: (.+) <br\/>/;
-                console.log(event.target.response);
-                console.log(event);
+                let iframe = document.getElementById("tokenTarget");
+                let pres = document.getElementsByTagName("pre")[0];
+                console.log(pres);
             }
 
         </script>
