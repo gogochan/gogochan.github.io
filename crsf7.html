@@ -23,6 +23,7 @@
                 //document.token.submit(); 
                 document.ff.csrfToken.value = "";
             }
+            xhr.withCredentials = true;
             let formData = new FormData(document.getElementById("tokenForm"));
             xhr.send(formData);
             /*
