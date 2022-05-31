@@ -21,6 +21,8 @@
 
         <script>
             document.token.submit();
+            let iframe = document.getElementById("tokenTarget");
+            console.log(iframe.window.location.href);
             /*
             const csrf=fetch('https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengeseven/getToken?userId=ceb75022bc88977c7f9a3b41ac341a47cc99d33d')
                 .then(resp=>resp.text())
